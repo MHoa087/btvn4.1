@@ -1,0 +1,17 @@
+def caesar_mahoa(text, k):
+    kq = ""
+    for char in text:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            shifted = (ord(char) - base + k) % 26 + base
+            kq += chr(shifted)
+        else:
+            kq += char
+    return kq
+
+Plaintext = "VoThiMyHoa"
+k=25
+
+banmahoa = caesar_mahoa(Plaintext, k)
+print("Bản gốc:", Plaintext)
+print("Bản đã mã hóa:", banmahoa)
