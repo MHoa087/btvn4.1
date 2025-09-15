@@ -1,17 +1,17 @@
-def caesar_encrypt(text, k):
-    result = ""
+def caesar_mahoa(text, k):
+    kq = ""
     for char in text:
         if char.isalpha():
             base = ord('A') if char.isupper() else ord('a')
             shifted = (ord(char) - base + k) % 26 + base
-            result += chr(shifted)
+            kq += chr(shifted)
         else:
-            result += char
-    return result
+            kq += char
+    return kq
 
-plaintext = "VoThiMyHoa"
-k =  25
+Plaintext = "VoThiMyHoa"
+k=25
 
-ciphertext = caesar_encrypt(plaintext, k)
-print("Plaintext:", plaintext)
-print("Ciphertext:", ciphertext)
+banmahoa = caesar_mahoa(Plaintext, k)
+print("Bản gốc:", Plaintext)
+print("Bản đã mã hóa:", banmahoa)
